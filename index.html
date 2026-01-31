@@ -8,13 +8,15 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap');
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
-        /* Pure CSS Dropdown */
-        .dropdown:hover .dropdown-menu { display: block; }
+        /* Desktop Hover Dropdown */
+        @media (min-width: 768px) {
+            .dropdown:hover .dropdown-menu { display: block; }
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
 
-    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 relative">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
             <h1 class="text-xl font-extrabold text-blue-600 tracking-tighter uppercase italic">Qaisha Fadhil Ahmad</h1>
             
@@ -37,7 +39,20 @@
                     </div>
                 </div>
             </div>
-            <div class="md:hidden text-blue-600 font-bold text-xs uppercase tracking-widest">Menu</div>
+
+            <button id="mobile-menu-btn" class="md:hidden text-blue-600 font-bold text-xs uppercase border border-blue-100 px-3 py-2 rounded hover:bg-blue-50 transition">
+                Menu ☰
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white border-b border-slate-200 shadow-xl md:hidden flex-col p-6 space-y-4 z-40">
+            <a href="#home" class="block text-slate-600 font-medium hover:text-blue-600">Home</a>
+            <a href="#about" class="block text-slate-600 font-medium hover:text-blue-600">About</a>
+            <a href="#education" class="block text-slate-600 font-medium hover:text-blue-600">Education</a>
+            <a href="#experience" class="block text-slate-600 font-medium hover:text-blue-600">Experience</a>
+            <a href="#projects" class="block text-slate-600 font-medium hover:text-blue-600">Projects</a>
+            <a href="#organization" class="block text-slate-600 font-medium hover:text-blue-600">Organization</a>
+            <a href="#skills" class="block text-blue-600 font-bold border-t pt-4 mt-2">View Skills</a>
         </div>
     </nav>
 
@@ -77,6 +92,7 @@
                         <h4 class="text-2xl font-extrabold text-slate-900 tracking-tight">Universitas Komputer Indonesia</h4>
                         <p class="text-blue-600 font-bold uppercase tracking-widest text-xs mt-1 italic italic">Bachelor of Computer Science in Informatics Engineering</p>
                         <p class="text-blue-600 font-bold uppercase tracking-widest text-xs mt-1 italic italic">GPA : 3.72 / 4.00</p>
+                        <p class="text-blue-600 font-bold uppercase tracking-widest text-xs mt-1 italic italic">Thesis : MBTI Classification Based on Data X Using Random Forest</p>
                     </div>
                     <span class="mt-4 md:mt-0 px-4 py-1 bg-slate-100 text-slate-500 rounded-full text-[10px] font-bold uppercase tracking-tighter italic">Class of 2021 — 2025</span>
                 </div>
@@ -261,5 +277,14 @@
         <p class="text-slate-400 text-[10px] font-bold uppercase tracking-[0.5em]">© 2026 Crafted by Qaisha Fadhil Ahmad</p>
     </footer>
 
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+        });
+    </script>
 </body>
 </html>
