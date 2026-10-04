@@ -8,13 +8,15 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap');
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
-        /* Pure CSS Dropdown */
-        .dropdown:hover .dropdown-menu { display: block; }
+        /* Desktop Hover Dropdown */
+        @media (min-width: 768px) {
+            .dropdown:hover .dropdown-menu { display: block; }
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
 
-    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 relative">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
             <h1 class="text-xl font-extrabold text-blue-600 tracking-tighter uppercase italic">Qaisha Fadhil Ahmad</h1>
             
@@ -22,6 +24,7 @@
                 <a href="#home" class="hover:text-blue-600 transition">Home</a>
                 <a href="#about" class="hover:text-blue-600 transition">About</a>
                 <a href="#education" class="hover:text-blue-600 transition">Education</a>
+                <a href="#certifications" class="hover:text-blue-600 transition">Certifications</a>
                 <a href="#experience" class="hover:text-blue-600 transition">Experience</a>
                 <a href="#projects" class="hover:text-blue-600 transition">Projects</a>
                 <a href="#organization" class="hover:text-blue-600 transition">Organization</a>
@@ -31,20 +34,34 @@
                         Skills <span class="ml-1 text-[10px]">▼</span>
                     </button>
                     <div class="dropdown-menu absolute hidden bg-white border border-slate-200 shadow-xl rounded-lg mt-2 py-2 w-44">
-                        <a href="#skills" class="block px-4 py-2 text-xs hover:bg-blue-50">Data Analyst</a>
-                        <a href="#skills" class="block px-4 py-2 text-xs hover:bg-blue-50">Data Science</a>
-                        <a href="#skills" class="block px-4 py-2 text-xs hover:bg-blue-50">Web Developer</a>
+                        <a href="#skills" class="block px-4 py-2 text-xs hover:bg-blue-50">Data Analytics</a>
+                        <a href="#skills" class="block px-4 py-2 text-xs hover:bg-blue-50">Machine Learning</a>
+                        <a href="#skills" class="block px-4 py-2 text-xs hover:bg-blue-50">Risk Management</a>
                     </div>
                 </div>
             </div>
-            <div class="md:hidden text-blue-600 font-bold text-xs uppercase tracking-widest">Menu</div>
+
+            <button id="mobile-menu-btn" class="md:hidden text-blue-600 font-bold text-xs uppercase border border-blue-100 px-3 py-2 rounded hover:bg-blue-50 transition">
+                Menu ☰
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white border-b border-slate-200 shadow-xl md:hidden flex-col p-6 space-y-4 z-40">
+            <a href="#home" class="block text-slate-600 font-medium hover:text-blue-600">Home</a>
+            <a href="#about" class="block text-slate-600 font-medium hover:text-blue-600">About</a>
+            <a href="#education" class="block text-slate-600 font-medium hover:text-blue-600">Education</a>
+            <a href="#certifications" class="block text-slate-600 font-medium hover:text-blue-600">Certifications</a>
+            <a href="#experience" class="block text-slate-600 font-medium hover:text-blue-600">Experience</a>
+            <a href="#projects" class="block text-slate-600 font-medium hover:text-blue-600">Projects</a>
+            <a href="#organization" class="block text-slate-600 font-medium hover:text-blue-600">Organization</a>
+            <a href="#skills" class="block text-blue-600 font-bold border-t pt-4 mt-2">View Skills</a>
         </div>
     </nav>
 
     <header id="home" class="py-24 px-6 max-w-5xl mx-auto text-center">
         <div class="flex flex-col items-center gap-4 mb-8">
             <span class="inline-block bg-blue-100 text-blue-700 text-[10px] font-bold px-4 py-1.5 rounded-full uppercase tracking-[0.2em] shadow-sm">
-                Awarded as The Youngest Graduate
+                BNSP-Certified Associate Data Scientist | Youngest Graduate
             </span>
         </div>
         
@@ -52,172 +69,174 @@
             <h3 class="text-5xl md:text-7xl font-bold mb-8 tracking-tight text-slate-900">Hi, I'm <span class="text-blue-600">Qaisha Fadhil Ahmad</span></h3>
             
             <p class="text-slate-600 text-lg md:text-2xl leading-relaxed text-center font-medium mb-8">
-                As an <span class="text-blue-600 font-bold">Informatics Engineering</span> graduate from the Class of 2021 at <span class="text-slate-900 font-bold">Universitas Komputer Indonesia</span>, I possess a deep-seated passion for the data-tech landscape.
+                I'm a <span class="text-blue-600 font-bold">Data Analytics Professional</span> driving strategic decisions through robust data processing and risk analytics.
             </p>
             
-            <p class="text-slate-500 text-lg md:text-xl leading-relaxed italic max-w-3xl mx-auto border-t border-slate-100 pt-8">
-                "As the youngest graduate in my cohort, I am driven to prove that age is no barrier to delivering significant professional impact. I prioritize logic and efficiency in every challenge I undertake, with a strong interest in <span class="text-blue-600 font-semibold">Data Analyst, Data Science, and Big Data & Analytics.</span>"
+            <p id="about" class="text-slate-500 text-lg md:text-xl leading-relaxed italic max-w-3xl mx-auto border-t border-slate-100 pt-8">
+                "Adept at translating complex enterprise datasets into actionable insights. Skilled in leveraging <span class="text-blue-600 font-semibold">Python, SQL, PySpark, and Machine Learning</span> frameworks to optimize portfolio monitoring and balance business growth with prudent risk management."
             </p>
         </div>
     </header>
 
     <section class="text-center py-10 border-y border-slate-200/50 bg-white/50">
         <p class="text-slate-400 font-semibold tracking-[0.3em] text-xs md:text-sm uppercase">
-            Data Analyst <span class="mx-3 text-slate-200">|</span> Data Science <span class="mx-3 text-slate-200">|</span> Big Data & Analytics
+            Credit Risk Analytics <span class="mx-3 text-slate-200">|</span> Machine Learning <span class="mx-3 text-slate-200">|</span> Big Data Processing
         </p>
     </section>
 
     <main class="max-w-5xl mx-auto px-6 space-y-24 pb-32 pt-12">
         
+        <!-- EDUCATION SECTION -->
         <section id="education" class="scroll-mt-24">
             <h3 class="text-2xl font-bold mb-10 border-b-2 border-slate-100 pb-4 uppercase tracking-tighter italic">Education</h3>
             <div class="bg-white p-8 border border-slate-200 rounded-3xl shadow-sm hover:border-blue-100 transition duration-300">
-                <div class="flex flex-col md:flex-row md:justify-between items-start md:items-center">
-                    <div>
-                        <h4 class="text-2xl font-extrabold text-slate-900 tracking-tight">Universitas Komputer Indonesia</h4>
-                        <p class="text-blue-600 font-bold uppercase tracking-widest text-xs mt-1 italic italic">Bachelor of Computer Science in Informatics Engineering</p>
-                        <p class="text-blue-600 font-bold uppercase tracking-widest text-xs mt-1 italic italic">GPA : 3.72 / 4.00</p>
+                <div class="flex flex-col md:flex-row md:justify-between items-start">
+                    <div class="w-full md:w-3/4">
+                        <h4 class="text-2xl font-extrabold text-slate-900 tracking-tight">University of Computer Indonesia</h4>
+                        <p class="text-blue-600 font-bold uppercase tracking-widest text-xs mt-1 italic">Faculty of Engineering & Computer Science | Bachelor of Informatics</p>
+                        <p class="text-slate-500 font-bold uppercase tracking-widest text-xs mt-2">GPA: 3.72 / 4.00</p>
+                        
+                        <div class="mt-6">
+                            <p class="font-bold text-slate-800 text-sm italic">Thesis: MBTI Classification Based on X Data Using Random Forest</p>
+                            <ul class="list-disc ml-5 mt-3 space-y-2 text-slate-600 text-sm leading-relaxed">
+                                <li>Extracted and processed an imbalanced dataset of <span class="font-bold">11,650 text-based social media records</span> for psychological profiling.</li>
+                                <li>Conducted rigorous data preprocessing, including case folding, text cleaning, slang normalization, and feature extraction utilizing <span class="font-bold">Raw-TF</span>.</li>
+                                <li>Built and optimized a <span class="font-bold">Random Forest classifier</span> utilizing RandomizedSearchCV for hyperparameter tuning and evaluated resampling techniques (SMOTE, ROSE, RUS) to handle imbalanced data.</li>
+                            </ul>
+                        </div>
                     </div>
-                    <span class="mt-4 md:mt-0 px-4 py-1 bg-slate-100 text-slate-500 rounded-full text-[10px] font-bold uppercase tracking-tighter italic">Class of 2021 — 2025</span>
+                    <span class="mt-4 md:mt-0 px-4 py-1 bg-slate-100 text-slate-500 rounded-full text-[10px] font-bold uppercase tracking-tighter italic whitespace-nowrap">SEP 2021 — AUG 2025</span>
                 </div>
             </div>
         </section>
 
+        <!-- CERTIFICATIONS SECTION (NEW) -->
+        <section id="certifications" class="scroll-mt-24">
+            <h3 class="text-2xl font-bold mb-10 border-b-2 border-slate-100 pb-4 uppercase tracking-tighter italic">Certifications & Achievements</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="p-6 bg-white border border-slate-200 rounded-2xl hover:shadow-md transition">
+                    <h4 class="font-bold text-slate-900 text-sm">Associate Data Scientist</h4>
+                    <p class="text-xs text-blue-600 font-bold mt-1">BNSP (Badan Nasional Sertifikasi Profesi)</p>
+                    <p class="text-xs text-slate-400 mt-2">March 2025</p>
+                </div>
+                <div class="p-6 bg-white border border-slate-200 rounded-2xl hover:shadow-md transition">
+                    <h4 class="font-bold text-slate-900 text-sm">AI & Cybersecurity Certification</h4>
+                    <p class="text-xs text-blue-600 font-bold mt-1">IBM SkillsBuild MSIB</p>
+                    <p class="text-xs text-slate-400 mt-2">July 2024</p>
+                </div>
+                <div class="p-6 bg-white border border-slate-200 rounded-2xl hover:shadow-md transition">
+                    <h4 class="font-bold text-slate-900 text-sm">Machine Learning & Deep Learning</h4>
+                    <p class="text-xs text-blue-600 font-bold mt-1">IBM Developer Skills Network (Python & TensorFlow)</p>
+                    <p class="text-xs text-slate-400 mt-2">May 2024</p>
+                </div>
+                <div class="p-6 bg-white border border-slate-200 rounded-2xl hover:shadow-md transition">
+                    <h4 class="font-bold text-slate-900 text-sm">Language Proficiencies</h4>
+                    <p class="text-xs text-blue-600 font-bold mt-1">TOEFL Score: 593 | JLPT N5 (Passed)</p>
+                    <p class="text-xs text-slate-400 mt-2">2025 - 2026</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE SECTION -->
         <section id="experience" class="scroll-mt-24">
-            <h3 class="text-2xl font-bold mb-16 border-b-2 border-slate-100 pb-4 uppercase tracking-tighter italic text-blue-600 italic">Professional Experience</h3>
+            <h3 class="text-2xl font-bold mb-16 border-b-2 border-slate-100 pb-4 uppercase tracking-tighter italic text-blue-600">Professional Experience</h3>
             
-            <div class="space-y-20 max-w-4xl mx-auto">
+            <div class="space-y-16 max-w-4xl mx-auto">
                 
                 <div class="relative pl-8 border-l-2 border-blue-600 group">
                     <div class="absolute -left-[9px] top-0 w-4 h-4 bg-white border-2 border-blue-600 rounded-full group-hover:bg-blue-600 transition-colors"></div>
                     <div class="flex flex-col md:flex-row md:justify-between items-start mb-3">
-                        <h4 class="text-xl font-bold text-slate-900 italic italic italic">Data Analytics Intern Assistant</h4>
-                        <span class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full uppercase italic tracking-tighter italic italic italic italic">NOV 2025 — NOW</span>
+                        <h4 class="text-xl font-bold text-slate-900 italic">Data Analyst — Retail Collection & Recovery</h4>
+                        <span class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full uppercase italic tracking-tighter">JUL 2026 — PRESENT</span>
                     </div>
-                    <p class="font-bold text-slate-700 text-sm mb-6 uppercase tracking-tight italic italic">PT. BANK RAKYAT INDONESIA</p>
+                    <p class="font-bold text-slate-700 text-sm mb-6 uppercase tracking-tight italic">PT BANK RAKYAT INDONESIA (PERSERO) TBK</p>
                     
-                    <ul class="text-slate-500 text-sm leading-relaxed italic space-y-4 list-disc ml-4 italic italic italic">
-                        <li><strong>Automated Efficiency:</strong> Conducted deep-dive data analysis to optimize business processes, developing automated reporting tools that improved efficiency by 20%.</li>
-                        <li><strong>Data Integrity:</strong> Executed rigorous data cleansing on large-scale datasets using Python to maintain high accuracy for internal auditing.</li>
-                        <li><strong>Strategic Reporting:</strong> Drafted executive presentations (PPT) to communicate data trends and operational recommendations effectively.</li>
+                    <ul class="text-slate-600 text-sm leading-relaxed space-y-4 list-disc ml-4">
+                        <li>Upgraded the Credit Risk Analysis System (CRAS) and operational reporting from monthly to daily cycles, significantly enhancing real-time portfolio monitoring.</li>
+                        <li>Orchestrated end-to-end daily data pipelines by extracting and processing massive credit datasets utilizing <span class="font-bold text-slate-800">PySpark, Cloudera Machine Learning (CML), and SQL</span>.</li>
+                        <li>Conducted rigorous data reconciliation and validation against primary sources (e.g., Cognos) to resolve cross-departmental discrepancies.</li>
+                        <li>Provided critical analytical support by executing complex ad-hoc data extractions and tailored analyses for cross-functional stakeholders.</li>
                     </ul>
                 </div>
 
                 <div class="relative pl-8 border-l-2 border-slate-200 group">
                     <div class="absolute -left-[9px] top-0 w-4 h-4 bg-white border-2 border-slate-200 rounded-full group-hover:border-blue-600 transition-colors"></div>
                     <div class="flex flex-col md:flex-row md:justify-between items-start mb-3">
-                        <h4 class="text-xl font-bold text-slate-900 italic italic italic">Marketing Internship Program</h4>
-                        <span class="text-xs font-bold text-slate-400 bg-slate-50 px-3 py-1 rounded-full uppercase italic tracking-tighter italic italic italic">AUG 2024 — SEP 2024</span>
+                        <h4 class="text-xl font-bold text-slate-900 italic">Marketing Internship Program</h4>
+                        <span class="text-xs font-bold text-slate-400 bg-slate-50 px-3 py-1 rounded-full uppercase italic tracking-tighter">AUG 2024 — SEP 2024</span>
                     </div>
-                    <p class="font-bold text-slate-700 text-sm mb-6 uppercase tracking-tight italic italic">PT. TERAKORP INDONESIA</p>
+                    <p class="font-bold text-slate-700 text-sm mb-6 uppercase tracking-tight italic">PT. TERAKORP INDONESIA</p>
                     
-                    <ul class="text-slate-500 text-sm leading-relaxed italic space-y-4 list-disc ml-4 italic italic italic">
-                        <li><strong>Competitive Intelligence:</strong> Evaluated 5+ key competitors through rigorous SWOT analysis and application demos, identifying 3+ critical market gaps.</li>
-                        <li><strong>Full-stack Web Dev:</strong> Developed and deployed the official <strong>teraMedikCE</strong> corporate profile website using HTML, CSS, JS, and PHP.</li>
-                        <li><strong>Data Pioneer:</strong> Spearheaded the division's first Power BI dashboard, enabling automated data visualization and real-time business insights.</li>
+                    <ul class="text-slate-600 text-sm leading-relaxed space-y-4 list-disc ml-4">
+                        <li>Evaluated 5+ key competitors through rigorous SWOT analysis and application demos, identifying critical market gaps.</li>
+                        <li>Developed and deployed the official <strong>teraMedikCE</strong> corporate profile website using HTML, CSS, JS, and PHP.</li>
                     </ul>
                 </div>
             </div>
         </section>
 
+        <!-- PROJECTS SECTION -->
         <section id="projects" class="scroll-mt-24">
             <h3 class="text-2xl font-bold mb-10 border-b-2 border-slate-100 pb-4 uppercase tracking-tighter italic text-blue-600">Technical Projects</h3>
             <div class="grid md:grid-cols-2 gap-8">
                 
-                <div class="group bg-white border border-slate-200 rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-500">
+                <div class="group bg-white border border-slate-200 rounded-3xl overflow-hidden hover:shadow-xl transition-all duration-300">
                     <div class="aspect-video bg-slate-100 flex items-center justify-center overflow-hidden">
-                        <img src="powerbi.png" alt="Power BI Dashboard Screenshot" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <!-- Keep your original image source -->
+                        <img src="powerbi.png" alt="Power BI Dashboard" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                     </div>
                     <div class="p-8">
-                        <h4 class="text-xl font-bold group-hover:text-blue-600 transition mb-4 tracking-tight">Power BI Dashboard</h4>
-                        <p class="text-slate-500 text-sm leading-relaxed mb-6 italic">Pioneered the division's first Power BI dashboard, enabling automated data visualization and real-time business insights.</p>
+                        <h4 class="text-xl font-bold group-hover:text-blue-600 transition mb-4 tracking-tight">Credit Risk Executive Dashboard</h4>
+                        <p class="text-slate-500 text-sm leading-relaxed mb-6">Designed and deployed an automated Power BI dashboard utilizing advanced DAX measures to translate complex recovery data into actionable executive-level visualizations.</p>
                         <div class="flex flex-wrap gap-2">
                             <span class="text-[9px] bg-blue-50 text-blue-600 px-3 py-1 rounded-full font-bold uppercase italic">Power BI</span>
-                            <span class="text-[9px] bg-blue-50 text-blue-600 px-3 py-1 rounded-full font-bold uppercase italic">Data Visualization</span>
+                            <span class="text-[9px] bg-blue-50 text-blue-600 px-3 py-1 rounded-full font-bold uppercase italic">DAX</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="group bg-white border border-slate-200 rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-500">
+                <div class="group bg-white border border-slate-200 rounded-3xl overflow-hidden hover:shadow-xl transition-all duration-300">
                     <div class="aspect-video bg-slate-100 flex items-center justify-center overflow-hidden">
-                        <img src="Excel.png" alt="Excel Large Dataset Screenshot" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <img src="Excel.png" alt="Big Data Pipeline" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                     </div>
                     <div class="p-8">
                         <h4 class="text-xl font-bold group-hover:text-blue-600 transition mb-4 tracking-tight">Large-Scale Data Processing</h4>
-                        <p class="text-slate-500 text-sm leading-relaxed mb-6 italic">
-                            Managed and processed a massive financial dataset exceeding <span class="font-bold text-slate-700">1,000,000+ rows</span> in Excel. Executed rigorous data cleansing to ensure 100% accuracy for risk assessment reporting.
-                        </p>
+                        <p class="text-slate-500 text-sm leading-relaxed mb-6">Processed massive enterprise datasets (millions of records) utilizing PySpark and Python pipelines. Executed rigorous data reconciliation to ensure a 100% accurate single source of truth.</p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="text-[9px] bg-blue-50 text-blue-600 px-3 py-1 rounded-full font-bold uppercase italic">Advanced Excel</span>
-                            <span class="text-[9px] bg-blue-50 text-blue-600 px-3 py-1 rounded-full font-bold uppercase italic">Big Data</span>
-                            <span class="text-[9px] bg-blue-50 text-blue-600 px-3 py-1 rounded-full font-bold uppercase italic">Cleansing</span>
+                            <span class="text-[9px] bg-yellow-50 text-yellow-700 px-3 py-1 rounded-full font-bold uppercase italic">PySpark</span>
+                            <span class="text-[9px] bg-yellow-50 text-yellow-700 px-3 py-1 rounded-full font-bold uppercase italic">Big Data</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="group bg-white border border-slate-200 rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-500">
+                <div class="group bg-white border border-slate-200 rounded-3xl overflow-hidden hover:shadow-xl transition-all duration-300">
                     <div class="aspect-video bg-slate-100 flex items-center justify-center overflow-hidden relative">
-                        <img src="Python.png" alt="Python Automation" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                        <div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition"></div>
+                        <img src="Python.png" alt="Python Machine Learning" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                     </div>
                     <div class="p-6">
-                        <h4 class="text-lg font-bold group-hover:text-blue-600 transition mb-3 tracking-tight">Python Data Automation</h4>
-                        <p class="text-slate-500 text-xs leading-relaxed mb-4 italic">
-                            Developed robust Python scripts using <span class="font-bold">Pandas</span> to automate ETL processes. Handled complex data cleansing and mapping for multi-source datasets.
+                        <h4 class="text-lg font-bold group-hover:text-blue-600 transition mb-3 tracking-tight">Machine Learning Classification</h4>
+                        <p class="text-slate-500 text-xs leading-relaxed mb-4">
+                            Developed a predictive NLP model using Scikit-Learn (Random Forest) to classify text data. Implemented SMOTE to handle extreme class imbalances during training.
                         </p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="text-[9px] bg-yellow-50 text-yellow-700 px-3 py-1 rounded-full font-bold uppercase italic">Python</span>
-                            <span class="text-[9px] bg-yellow-50 text-yellow-700 px-3 py-1 rounded-full font-bold uppercase italic">Pandas</span>
-                            <span class="text-[9px] bg-yellow-50 text-yellow-700 px-3 py-1 rounded-full font-bold uppercase italic">Automation</span>
+                            <span class="text-[9px] bg-green-50 text-green-700 px-3 py-1 rounded-full font-bold uppercase italic">Python</span>
+                            <span class="text-[9px] bg-green-50 text-green-700 px-3 py-1 rounded-full font-bold uppercase italic">Scikit-Learn</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="group bg-white border border-slate-200 rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-500">
-                    <div class="aspect-video bg-slate-100 flex items-center justify-center overflow-hidden relative">
-                        <img src="Canva.png" alt="Strategic Presentation" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-6">
-                        <h4 class="text-lg font-bold group-hover:text-blue-600 transition mb-3 tracking-tight">Executive Strategy Design</h4>
-                        <p class="text-slate-500 text-xs leading-relaxed mb-4 italic">
-                            Designed high-impact executive presentations for the <span class="font-bold">Risk Directorate</span>. Synthesized complex strategies into visual data stories.
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="text-[9px] bg-purple-50 text-purple-700 px-3 py-1 rounded-full font-bold uppercase italic">Canva</span>
-                            <span class="text-[9px] bg-purple-50 text-purple-700 px-3 py-1 rounded-full font-bold uppercase italic">Data Storytelling</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="group bg-white border border-slate-200 rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-500">
-                    <div class="aspect-video bg-slate-900 flex items-center justify-center overflow-hidden relative">
-                        <img src="Web.png" alt="TeraMedikCE Website" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-6">
-                        <h4 class="text-lg font-bold group-hover:text-blue-600 transition mb-3 tracking-tight">Corporate Web Development</h4>
-                        <p class="text-slate-500 text-xs leading-relaxed mb-4 italic">
-                            Engineered the official product profile for <span class="font-bold">teraMedikCE</span>. Built a responsive, dark-themed UI to showcase healthcare SaaS solutions.
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="text-[9px] bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full font-bold uppercase italic">HTML/CSS</span>
-                            <span class="text-[9px] bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full font-bold uppercase italic">PHP</span>
-                            <span class="text-[9px] bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full font-bold uppercase italic">Web Dev</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="group bg-white border border-slate-200 rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-500">
+                <div class="group bg-white border border-slate-200 rounded-3xl overflow-hidden hover:shadow-xl transition-all duration-300">
                     <div class="aspect-video bg-slate-100 flex items-center justify-center overflow-hidden relative">
                         <img src="SQL.png" alt="SQL Database" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                     </div>
                     <div class="p-6">
-                        <h4 class="text-lg font-bold group-hover:text-blue-600 transition mb-3 tracking-tight">SQL Database Management</h4>
-                        <p class="text-slate-500 text-xs leading-relaxed mb-4 italic">
-                            Managed relational databases for employee systems (`kepegawaian`). Executed complex SQL queries using <span class="font-bold">phpMyAdmin</span>.
+                        <h4 class="text-lg font-bold group-hover:text-blue-600 transition mb-3 tracking-tight">Complex SQL Query Optimization</h4>
+                        <p class="text-slate-500 text-xs leading-relaxed mb-4">
+                            Executed robust SQL queries (Impala, Hive, PostgreSQL) to extract and aggregate critical portfolio data across distributed databases for analytical reporting.
                         </p>
                         <div class="flex flex-wrap gap-2">
                             <span class="text-[9px] bg-orange-50 text-orange-700 px-3 py-1 rounded-full font-bold uppercase italic">SQL</span>
-                            <span class="text-[9px] bg-orange-50 text-orange-700 px-3 py-1 rounded-full font-bold uppercase italic">Database</span>
+                            <span class="text-[9px] bg-orange-50 text-orange-700 px-3 py-1 rounded-full font-bold uppercase italic">Data Extraction</span>
                         </div>
                     </div>
                 </div>
@@ -225,33 +244,37 @@
             </div>
         </section>
 
+        <!-- ORGANIZATION SECTION -->
         <section id="organization" class="scroll-mt-24">
-            <h3 class="text-2xl font-bold mb-10 border-b-2 border-slate-100 pb-4 uppercase tracking-tighter italic">Organization</h3>
-            <div class="bg-white p-8 border border-slate-100 rounded-3xl shadow-sm hover:shadow-md transition flex items-center">
-                <div class="w-2 h-2 bg-blue-600 rounded-full mr-4"></div>
-                <div>
-                    <h4 class="font-bold text-slate-900 tracking-tight italic">Staff of Bulutangkis Unikom</h4>
-                    <p class="text-xs text-slate-400 uppercase tracking-[0.2em] mt-1 font-bold italic">Sport Department | University of Computer Indonesia</p>
+            <h3 class="text-2xl font-bold mb-10 border-b-2 border-slate-100 pb-4 uppercase tracking-tighter italic">Organizational Experience</h3>
+            <div class="bg-white p-8 border border-slate-100 rounded-3xl shadow-sm hover:border-blue-100 transition duration-300">
+                <div class="flex flex-col md:flex-row md:justify-between items-start">
+                    <div class="w-full md:w-3/4">
+                        <h4 class="font-bold text-slate-900 tracking-tight text-xl">Badminton Club – University of Computer Indonesia</h4>
+                        <p class="text-xs text-blue-600 uppercase mt-1 font-bold italic">Staff</p>
+                        <ul class="list-disc ml-5 mt-4 space-y-2 text-slate-600 text-sm leading-relaxed">
+                            <li>Managed administrative operations and coordinated end-to-end logistics for club activities, ensuring the smooth execution of weekly training sessions.</li>
+                            <li>Maintained accurate databases for member attendance (50+ active members), equipment inventory, and internal documentation.</li>
+                            <li>Supported the planning and execution of university-level sports tournaments, collaborating with cross-functional teams.</li>
+                        </ul>
+                    </div>
+                    <span class="mt-4 md:mt-0 px-4 py-1 bg-slate-50 text-slate-500 rounded-full text-[10px] font-bold uppercase tracking-tighter italic whitespace-nowrap">SEP 2021 — JUL 2023</span>
                 </div>
             </div>
         </section>
 
+        <!-- SKILLS SECTION -->
         <section id="skills" class="scroll-mt-24 text-center">
             <h3 class="text-xs font-bold mb-12 uppercase tracking-[0.5em] text-slate-400 italic">Technical Arsenal</h3>
-            <div class="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
-                <span class="px-8 py-3 bg-white border border-slate-200 rounded-full text-xs font-bold hover:bg-yellow-50 hover:text-yellow-700 hover:border-yellow-200 transition-all shadow-sm italic cursor-default">Python & Automated ETL</span>
-                
-                <span class="px-8 py-3 bg-white border border-slate-200 rounded-full text-xs font-bold hover:bg-blue-50 hover:text-blue-700 hover:border-blue-200 transition-all shadow-sm italic cursor-default">Power BI & Visualization</span>
-                
-                <span class="px-8 py-3 bg-white border border-slate-200 rounded-full text-xs font-bold hover:bg-orange-50 hover:text-orange-700 hover:border-orange-200 transition-all shadow-sm italic cursor-default">SQL & Database Management</span>
-                
-                <span class="px-8 py-3 bg-white border border-slate-200 rounded-full text-xs font-bold hover:bg-green-50 hover:text-green-700 hover:border-green-200 transition-all shadow-sm italic cursor-default">Advanced Excel (Big Data)</span>
-                
-                <span class="px-8 py-3 bg-white border border-slate-200 rounded-full text-xs font-bold hover:bg-indigo-50 hover:text-indigo-700 hover:border-indigo-200 transition-all shadow-sm italic cursor-default">Fullstack Web Developer</span>
-                
-                <span class="px-8 py-3 bg-white border border-slate-200 rounded-full text-xs font-bold hover:bg-purple-50 hover:text-purple-700 hover:border-purple-200 transition-all shadow-sm italic cursor-default">Data Storytelling</span>
-                
-                <span class="px-8 py-3 bg-white border border-slate-200 rounded-full text-xs font-bold hover:bg-slate-50 hover:text-slate-700 hover:border-slate-200 transition-all shadow-sm italic cursor-default">SWOT Analysis</span>
+            <div class="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
+                <span class="px-6 py-2 bg-white border border-slate-200 rounded-full text-xs font-bold text-slate-700 shadow-sm cursor-default">Python (Pandas, Scikit-learn, NLTK)</span>
+                <span class="px-6 py-2 bg-white border border-slate-200 rounded-full text-xs font-bold text-slate-700 shadow-sm cursor-default">SQL (Impala, Hive)</span>
+                <span class="px-6 py-2 bg-white border border-slate-200 rounded-full text-xs font-bold text-slate-700 shadow-sm cursor-default">PySpark & CML</span>
+                <span class="px-6 py-2 bg-white border border-slate-200 rounded-full text-xs font-bold text-slate-700 shadow-sm cursor-default">Machine Learning (Random Forest)</span>
+                <span class="px-6 py-2 bg-white border border-slate-200 rounded-full text-xs font-bold text-slate-700 shadow-sm cursor-default">Credit Risk Analytics</span>
+                <span class="px-6 py-2 bg-white border border-slate-200 rounded-full text-xs font-bold text-slate-700 shadow-sm cursor-default">Big Data Processing</span>
+                <span class="px-6 py-2 bg-white border border-slate-200 rounded-full text-xs font-bold text-slate-700 shadow-sm cursor-default">Power BI (DAX, Power Query)</span>
+                <span class="px-6 py-2 bg-white border border-slate-200 rounded-full text-xs font-bold text-slate-700 shadow-sm cursor-default">Executive Reporting</span>
             </div>
         </section>
 
@@ -261,5 +284,14 @@
         <p class="text-slate-400 text-[10px] font-bold uppercase tracking-[0.5em]">© 2026 Crafted by Qaisha Fadhil Ahmad</p>
     </footer>
 
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+        });
+    </script>
 </body>
 </html>
