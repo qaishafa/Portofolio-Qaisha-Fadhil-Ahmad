@@ -58,32 +58,44 @@
         </div>
     </nav>
 
-    <header id="home" class="py-24 px-6 max-w-5xl mx-auto text-center">
-        <div class="flex flex-col items-center gap-6 mb-8">
-            
-            <!-- FOTO PROFIL MULAI DI SINI -->
-            <div class="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white shadow-xl ring-2 ring-blue-50 hover:scale-105 transition-transform duration-300">
-                <!-- Pastikan nama file gambar di bawah ini sesuai dengan foto Anda (misal: profile.png atau foto.jpg) -->
-                <img src="foto_qaisha.jpg" alt="Qaisha Fadhil Ahmad" class="w-full h-full object-cover object-top">
-            </div>
-            <!-- FOTO PROFIL SELESAI -->
+    <header id="home" class="pt-32 pb-20 px-6 max-w-4xl mx-auto text-center flex flex-col items-center">
+        
+        <!-- FOTO PROFIL (Dipertahankan) -->
+        <div class="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white shadow-xl ring-2 ring-slate-100 mb-8">
+            <img src="foto_qaisha.jpg" alt="Qaisha Fadhil Ahmad" class="w-full h-full object-cover object-top">
+        </div>
 
-            <span class="inline-block bg-blue-100 text-blue-700 text-[10px] font-bold px-4 py-1.5 rounded-full uppercase tracking-[0.2em] shadow-sm mt-2">
-                BNSP-Certified Associate Data Scientist | Youngest Graduate
+        <!-- BADGE (Dibuat lebih ringkas dan elegan) -->
+        <div class="mb-6">
+            <span class="bg-slate-900 text-white text-[10px] font-bold px-5 py-2 rounded-full uppercase tracking-[0.2em] shadow-sm">
+                BNSP-Certified Data Scientist
             </span>
         </div>
         
-        <div class="max-w-4xl mx-auto">
-            <h3 class="text-5xl md:text-7xl font-bold mb-8 tracking-tight text-slate-900">Hi, I'm <span class="text-blue-600">Qaisha Fadhil Ahmad</span></h3>
-            
-            <p class="text-slate-600 text-lg md:text-2xl leading-relaxed text-center font-medium mb-8">
-                I'm a <span class="text-blue-600 font-bold">Data Analytics Professional</span> driving strategic decisions through robust data processing and risk analytics.
+        <!-- NAMA UTAMA (Satu baris, solid) -->
+        <h3 class="text-4xl md:text-6xl font-extrabold mb-4 tracking-tight text-slate-900">
+            Qaisha Fadhil Ahmad
+        </h3>
+        
+        <!-- SUBTITLE/JABATAN (Dipisah agar tegas) -->
+        <p class="text-blue-600 text-sm md:text-base font-bold uppercase tracking-[0.3em] mb-8">
+            Data Analytics Professional
+        </p>
+        
+        <!-- DESKRIPSI (Dibatasi lebarnya: max-w-2xl agar tidak berantakan) -->
+        <div class="max-w-2xl mx-auto space-y-6">
+            <p class="text-slate-600 text-lg md:text-xl leading-relaxed font-medium">
+                Driving strategic decisions through robust data processing and risk analytics.
             </p>
             
-            <p id="about" class="text-slate-500 text-lg md:text-xl leading-relaxed italic max-w-3xl mx-auto border-t border-slate-100 pt-8">
-                "Adept at translating complex enterprise datasets into actionable insights. Skilled in leveraging <span class="text-blue-600 font-semibold">Python, SQL, PySpark, and Machine Learning</span> frameworks to optimize portfolio monitoring and balance business growth with prudent risk management."
+            <!-- Garis pembatas estetis -->
+            <div class="h-px w-12 bg-slate-300 mx-auto"></div> 
+            
+            <p class="text-slate-500 text-sm md:text-base leading-relaxed">
+                Adept at translating complex enterprise datasets into actionable insights. Skilled in leveraging <span class="font-bold text-slate-700">Python, SQL, PySpark, and Machine Learning</span> frameworks to optimize portfolio monitoring and balance business growth with prudent risk management.
             </p>
         </div>
+        
     </header>
 
     <section class="text-center py-10 border-y border-slate-200/50 bg-white/50">
