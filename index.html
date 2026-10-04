@@ -155,41 +155,77 @@
             </div>
         </section>
 
-        <!-- EXPERIENCE SECTION -->
+        <!-- EXPERIENCE SECTION BARU -->
         <section id="experience" class="scroll-mt-24">
-            <h3 class="text-2xl font-bold mb-16 border-b-2 border-slate-100 pb-4 uppercase tracking-tighter italic text-blue-600">Professional Experience</h3>
+            <div class="flex items-center gap-4 mb-12">
+                <h3 class="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight">Professional Experience</h3>
+                <!-- Garis horizontal estetis di sebelah judul -->
+                <div class="h-1 flex-grow bg-slate-100 rounded-full"></div>
+            </div>
             
-            <div class="space-y-16 max-w-4xl mx-auto">
+            <div class="space-y-6 max-w-5xl mx-auto">
                 
-                <div class="relative pl-8 border-l-2 border-blue-600 group">
-                    <div class="absolute -left-[9px] top-0 w-4 h-4 bg-white border-2 border-blue-600 rounded-full group-hover:bg-blue-600 transition-colors"></div>
-                    <div class="flex flex-col md:flex-row md:justify-between items-start mb-3">
-                        <h4 class="text-xl font-bold text-slate-900 italic">Data Analyst — Retail Collection & Recovery</h4>
-                        <span class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full uppercase italic tracking-tighter">JUL 2026 — PRESENT</span>
-                    </div>
-                    <p class="font-bold text-slate-700 text-sm mb-6 uppercase tracking-tight italic">PT BANK RAKYAT INDONESIA (PERSERO) TBK</p>
+                <!-- KARTU PENGALAMAN 1: BRI -->
+                <div class="bg-white p-6 md:p-10 border border-slate-200 rounded-3xl shadow-sm hover:shadow-lg hover:border-blue-200 transition-all duration-300 relative group">
+                    <!-- Aksen garis biru di sebelah kiri kartu -->
+                    <div class="absolute left-0 top-6 bottom-6 w-1 bg-blue-600 rounded-r-full scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top"></div>
                     
-                    <ul class="text-slate-600 text-sm leading-relaxed space-y-4 list-disc ml-4">
-                        <li>Upgraded the Credit Risk Analysis System (CRAS) and operational reporting from monthly to daily cycles, significantly enhancing real-time portfolio monitoring.</li>
-                        <li>Orchestrated end-to-end daily data pipelines by extracting and processing massive credit datasets utilizing <span class="font-bold text-slate-800">PySpark, Cloudera Machine Learning (CML), and SQL</span>.</li>
-                        <li>Conducted rigorous data reconciliation and validation against primary sources (e.g., Cognos) to resolve cross-departmental discrepancies.</li>
-                        <li>Provided critical analytical support by executing complex ad-hoc data extractions and tailored analyses for cross-functional stakeholders.</li>
+                    <div class="flex flex-col md:flex-row md:justify-between items-start mb-6 gap-4">
+                        <div>
+                            <h4 class="text-xl md:text-2xl font-bold text-slate-900">Data Analyst — Retail Collection & Recovery</h4>
+                            <p class="font-bold text-slate-500 text-sm mt-1 uppercase tracking-widest">PT Bank Rakyat Indonesia (Persero) Tbk</p>
+                        </div>
+                        <span class="inline-flex items-center px-4 py-1.5 bg-blue-50 text-blue-700 text-xs font-extrabold rounded-full uppercase tracking-wider whitespace-nowrap">
+                            Jul 2026 — Present
+                        </span>
+                    </div>
+                    
+                    <ul class="text-slate-600 text-sm md:text-base leading-relaxed space-y-4 list-none">
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-3 mt-1 font-bold">▹</span>
+                            <span>Upgraded the Credit Risk Analysis System (CRAS) and operational reporting from monthly to daily cycles, significantly enhancing real-time portfolio monitoring.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-3 mt-1 font-bold">▹</span>
+                            <span>Orchestrated end-to-end daily data pipelines by extracting and processing massive credit datasets utilizing <strong class="text-slate-800">PySpark, Cloudera Machine Learning (CML), and SQL</strong>.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-3 mt-1 font-bold">▹</span>
+                            <span>Conducted rigorous data reconciliation and validation against primary sources (e.g., Cognos) to resolve cross-departmental discrepancies.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-3 mt-1 font-bold">▹</span>
+                            <span>Provided critical analytical support by executing complex ad-hoc data extractions and tailored analyses for cross-functional stakeholders.</span>
+                        </li>
                     </ul>
                 </div>
 
-                <div class="relative pl-8 border-l-2 border-slate-200 group">
-                    <div class="absolute -left-[9px] top-0 w-4 h-4 bg-white border-2 border-slate-200 rounded-full group-hover:border-blue-600 transition-colors"></div>
-                    <div class="flex flex-col md:flex-row md:justify-between items-start mb-3">
-                        <h4 class="text-xl font-bold text-slate-900 italic">Marketing Internship Program</h4>
-                        <span class="text-xs font-bold text-slate-400 bg-slate-50 px-3 py-1 rounded-full uppercase italic tracking-tighter">AUG 2024 — SEP 2024</span>
-                    </div>
-                    <p class="font-bold text-slate-700 text-sm mb-6 uppercase tracking-tight italic">PT. TERAKORP INDONESIA</p>
+                <!-- KARTU PENGALAMAN 2: TERAKORP -->
+                <div class="bg-white p-6 md:p-10 border border-slate-200 rounded-3xl shadow-sm hover:shadow-lg hover:border-slate-300 transition-all duration-300 relative group">
+                    <div class="absolute left-0 top-6 bottom-6 w-1 bg-slate-400 rounded-r-full scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top"></div>
                     
-                    <ul class="text-slate-600 text-sm leading-relaxed space-y-4 list-disc ml-4">
-                        <li>Evaluated 5+ key competitors through rigorous SWOT analysis and application demos, identifying critical market gaps.</li>
-                        <li>Developed and deployed the official <strong>teraMedikCE</strong> corporate profile website using HTML, CSS, JS, and PHP.</li>
+                    <div class="flex flex-col md:flex-row md:justify-between items-start mb-6 gap-4">
+                        <div>
+                            <h4 class="text-xl md:text-2xl font-bold text-slate-900">Marketing Internship Program</h4>
+                            <p class="font-bold text-slate-500 text-sm mt-1 uppercase tracking-widest">PT. Terakorp Indonesia</p>
+                        </div>
+                        <span class="inline-flex items-center px-4 py-1.5 bg-slate-100 text-slate-600 text-xs font-extrabold rounded-full uppercase tracking-wider whitespace-nowrap">
+                            Aug 2024 — Sep 2024
+                        </span>
+                    </div>
+                    
+                    <ul class="text-slate-600 text-sm md:text-base leading-relaxed space-y-4 list-none">
+                        <li class="flex items-start">
+                            <span class="text-slate-400 mr-3 mt-1 font-bold">▹</span>
+                            <span>Evaluated 5+ key competitors through rigorous SWOT analysis and application demos, identifying critical market gaps.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-slate-400 mr-3 mt-1 font-bold">▹</span>
+                            <span>Developed and deployed the official <strong class="text-slate-800">teraMedikCE</strong> corporate profile website using HTML, CSS, JS, and PHP.</span>
+                        </li>
                     </ul>
                 </div>
+
             </div>
         </section>
 
