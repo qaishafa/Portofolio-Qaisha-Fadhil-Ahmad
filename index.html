@@ -58,44 +58,42 @@
         </div>
     </nav>
 
-    <header id="home" class="pt-32 pb-20 px-6 max-w-4xl mx-auto text-center flex flex-col items-center">
+    <header id="home" class="pt-24 pb-16 px-4 md:px-6 max-w-5xl mx-auto">
         
-        <!-- FOTO PROFIL (Dipertahankan) -->
-        <div class="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white shadow-xl ring-2 ring-slate-100 mb-8">
-            <img src="foto_qaisha.jpg" alt="Qaisha Fadhil Ahmad" class="w-full h-full object-cover object-top">
-        </div>
+        <!-- KARTU PROFIL UTAMA -->
+        <div class="bg-slate-700 rounded-3xl p-8 md:p-12 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-10 md:gap-16 text-white border border-slate-600">
+            
+            <!-- KOLOM KIRI: TEKS & TOMBOL -->
+            <div class="w-full md:w-3/5 flex flex-col items-start text-left space-y-6">
+                
+                <h3 class="text-3xl md:text-4xl font-extrabold tracking-tight">
+                    Hello, I'm Qaisha Fadhil Ahmad 👋
+                </h3>
+                
+                <p class="text-slate-200 text-sm md:text-base leading-relaxed font-medium">
+                    A Data Analytics Professional with experience turning complex enterprise datasets into actionable insights. Skilled in Python, SQL, PySpark, and Machine Learning for data exploration, dashboarding, and performance monitoring across business and analytical use cases.
+                </p>
+                
+                <p class="text-slate-200 text-sm md:text-base leading-relaxed font-medium">
+                    BNSP-Certified Associate Data Scientist and the youngest graduate of my cohort, with a strong foundation in data-driven decision making.
+                </p>
+                
+                <!-- TOMBOL DOWNLOAD CV -->
+                <!-- Ganti '#' dengan link Google Drive file PDF CV Anda -->
+                <a href="#" target="_blank" class="mt-2 inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 transition-all text-white text-sm font-bold py-3 px-6 rounded-xl backdrop-blur-md shadow-lg">
+                    📄 Download CV
+                </a>
+            </div>
 
-        <!-- BADGE (Dibuat lebih ringkas dan elegan) -->
-        <div class="mb-6">
-            <span class="bg-slate-900 text-white text-[10px] font-bold px-5 py-2 rounded-full uppercase tracking-[0.2em] shadow-sm">
-                BNSP-Certified Data Scientist
-            </span>
-        </div>
-        
-        <!-- NAMA UTAMA (Satu baris, solid) -->
-        <h3 class="text-4xl md:text-6xl font-extrabold mb-4 tracking-tight text-slate-900">
-            Qaisha Fadhil Ahmad
-        </h3>
-        
-        <!-- SUBTITLE/JABATAN (Dipisah agar tegas) -->
-        <p class="text-blue-600 text-sm md:text-base font-bold uppercase tracking-[0.3em] mb-8">
-            Data Analytics Professional
-        </p>
-        
-        <!-- DESKRIPSI (Dibatasi lebarnya: max-w-2xl agar tidak berantakan) -->
-        <div class="max-w-2xl mx-auto space-y-6">
-            <p class="text-slate-600 text-lg md:text-xl leading-relaxed font-medium">
-                Driving strategic decisions through robust data processing and risk analytics.
-            </p>
+            <!-- KOLOM KANAN: FOTO -->
+            <div class="w-full md:w-2/5 flex justify-center md:justify-end">
+                <!-- Bingkai foto diubah menjadi persegi panjang (aspect-[3/4]) seperti contoh -->
+                <div class="w-56 md:w-64 aspect-[3/4] rounded-2xl overflow-hidden border-4 border-slate-100 shadow-xl">
+                    <img src="foto_qaisha.jpg" alt="Qaisha Fadhil Ahmad" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500">
+                </div>
+            </div>
             
-            <!-- Garis pembatas estetis -->
-            <div class="h-px w-12 bg-slate-300 mx-auto"></div> 
-            
-            <p class="text-slate-500 text-sm md:text-base leading-relaxed">
-                Adept at translating complex enterprise datasets into actionable insights. Skilled in leveraging <span class="font-bold text-slate-700">Python, SQL, PySpark, and Machine Learning</span> frameworks to optimize portfolio monitoring and balance business growth with prudent risk management.
-            </p>
         </div>
-        
     </header>
 
     <section class="text-center py-10 border-y border-slate-200/50 bg-white/50">
